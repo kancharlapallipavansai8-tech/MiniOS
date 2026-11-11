@@ -1,0 +1,10 @@
+*.o
+*.dSYM/
+minios
+bin/
+.DS_Store
+examples/uptime_proc
+examples/uptime_macos
+examples/fork_basics
+examples/fork_memory
+examples/exec_wait

@@ -1,0 +1,3 @@
+macOS Uptime: 642925 seconds (178 hours, 35 mins)
+Physical RAM: 8.00 GB
+Memory State: 2.14 GB Active, 0.04 GB Free
