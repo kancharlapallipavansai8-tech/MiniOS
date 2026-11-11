@@ -15,4 +15,9 @@ void shell_loop(void);
 /* Chapter 4 */
 int run_program(char **args);
 
+/* Chapter 5 */
+int send_result(int fd, const char *result);
+int receive_result(int fd, char *buf, size_t capacity);
+int submit_job(const char *job_name);
+
 #endif /* MINIOS_H */
