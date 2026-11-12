@@ -28,6 +28,7 @@ static void parse_and_execute(char *line)
         printf("  run <cmd> [args] - Execute a program using fork/exec/waitpid\n");
         printf("  submit <job>     - Run a job in a worker process and collect result via pipe\n");
         printf("  workers <n>      - Spawn n concurrent POSIX threads inside MiniOS\n");
+        printf("  race             - Demonstrate race condition vs. mutex lock synchronization\n");
         printf("  quit             - Exit MiniOS\n\n");
     }
     else if (strcmp(args[0], "system") == 0)
@@ -60,6 +61,10 @@ static void parse_and_execute(char *line)
     {
         int count = (argc >= 2) ? atoi(args[1]) : 4;
         run_workers(count);
+    }
+    else if (strcmp(args[0], "race") == 0)
+    {
+        run_sync_demo();
     }
     else if (strcmp(args[0], "quit") == 0)
     {

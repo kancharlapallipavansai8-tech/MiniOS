@@ -23,4 +23,7 @@ int submit_job(const char *job_name);
 /* Chapter 6 */
 int run_workers(int count);
 
+/* Chapter 7 */
+void run_sync_demo(void);
+
 #endif /* MINIOS_H */
