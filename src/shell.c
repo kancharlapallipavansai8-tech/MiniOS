@@ -27,6 +27,7 @@ static void parse_and_execute(char *line)
         printf("  system           - Display OS uptime and memory metrics\n");
         printf("  run <cmd> [args] - Execute a program using fork/exec/waitpid\n");
         printf("  submit <job>     - Run a job in a worker process and collect result via pipe\n");
+        printf("  workers <n>      - Spawn n concurrent POSIX threads inside MiniOS\n");
         printf("  quit             - Exit MiniOS\n\n");
     }
     else if (strcmp(args[0], "system") == 0)
@@ -54,6 +55,11 @@ static void parse_and_execute(char *line)
         {
             submit_job(args[1]);
         }
+    }
+    else if (strcmp(args[0], "workers") == 0)
+    {
+        int count = (argc >= 2) ? atoi(args[1]) : 4;
+        run_workers(count);
     }
     else if (strcmp(args[0], "quit") == 0)
     {

@@ -20,4 +20,7 @@ int send_result(int fd, const char *result);
 int receive_result(int fd, char *buf, size_t capacity);
 int submit_job(const char *job_name);
 
+/* Chapter 6 */
+int run_workers(int count);
+
 #endif /* MINIOS_H */

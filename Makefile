@@ -1,6 +1,6 @@
 CC = clang
 CFLAGS = -Wall -Wextra -Iinclude -pthread
-SRC = src/main.c src/shell.c src/monitor.c src/process.c src/ipc.c
+SRC = src/main.c src/shell.c src/monitor.c src/process.c src/ipc.c src/workers.c
 OBJ = $(SRC:.c=.o)
 TARGET = minios
 
