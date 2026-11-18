@@ -41,10 +41,15 @@ MiniOS/
     ├── kernel_syscall_patch.c  # Kernel syscall table & sys_getreadcount() handler
     ├── user_syscall_test.c     # User-space ecall stub & verification utility
     └── README_CH8.md           # User-to-Kernel trap execution walkthrough
+```
+---
 
+## Setup & Installation
 git clone [https://github.com/kancharlapallipavansai8-tech/MiniOS.git](https://github.com/kancharlapallipavansai8-tech/MiniOS.git)
 cd MiniOS
 make
+
+## Usage & Supported Commands
 
 ./minios
 
@@ -55,5 +60,7 @@ MiniOS> submit log_scan  # Run a worker job and collect output via pipe()
 MiniOS> workers 4        # Spawn 4 concurrent POSIX threads
 MiniOS> race             # Compare unsynchronized vs. mutex-locked counters
 MiniOS> quit             # Exit MiniOS
+
+## Run Automated Verification
 
 bash tests/verify_all.sh
